@@ -1,0 +1,7 @@
+.actionList{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    margin: 0 2rem 0 2rem;
+}

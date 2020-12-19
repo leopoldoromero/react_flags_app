@@ -1,0 +1,26 @@
+.header{
+    background-color: rgba(161, 155, 155, 0);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.header_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4vw;
+    padding: 1rem;
+}
+
+.header h1{
+    color:  black;
+    font-size: 2rem;
+    box-shadow: 0 8px 6px -6px gray;
+    padding: 0.5rem;
+}
+
+.header p {
+    font-weight: 600;
+    padding: 0.5rem;
+    box-shadow: 0 8px 6px -6px gray;
+}
+
