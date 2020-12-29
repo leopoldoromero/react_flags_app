@@ -11,3 +11,9 @@
     font-size: 1rem;
 }
 
+@media (min-width: 300.99px) and (max-width: 575.98px){
+    .filterSelect select{
+        font-size: 0.6rem;
+    }
+}
+

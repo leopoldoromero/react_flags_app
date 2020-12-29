@@ -10,7 +10,7 @@ const CountryList = () => {
     const [{...props}, dispatch] = useStateValue();
     const [data, setData] = useState([]);
     const {countryListByName, countryListByRegion, countryList} = props
-    let list;
+
 
 
     useEffect(() => {
@@ -27,25 +27,34 @@ const CountryList = () => {
             
         })
        
-    }, [])
+    }, [dispatch])
 
-   list = countryList
+    let list;
 
+    if(countryListByRegion !== "" && countryListByRegion.length > 0){
+        console.log("lista por region")
+        list = countryListByRegion
+    }if(countryListByName !== "" && countryListByName.length > 0){
+        console.log("lista por nombre")
+        list = countryListByName
+    }else{
+        console.log("lista ")
+        list = countryList
+    }
 
     return (
         <div className="countryList">
             {
-
-                    list?.map((country) => (
-                    <Country
-                    key={country.name}
-                    name={country.name}
-                    flag={country.flag}
-                    population={country.population}
-                    region={country.region}
-                    capital={country.capital}
-                    alpha2Code={country.alpha2Code}/>
-                ))
+               list?.map((country) => (
+                <Country
+                key={country.name}
+                name={country.name}
+                flag={country.flag}
+                population={country.population}
+                region={country.region}
+                capital={country.capital}
+                alpha2Code={country.alpha2Code}/>
+            ))
             }
         </div>
     )

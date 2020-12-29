@@ -1,10 +1,14 @@
-
+.darkmode{
+  color: black;
+  color: white;
+  background-color: #1a2833;
+}
 
 
 .app_container{
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
+  margin-top: 5rem;
 }
 
 .app_search{
@@ -19,4 +23,10 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+@media (min-width: 300.99px) and (max-width: 575.98px){
+  .app_container{
+    margin-top: 2rem;
+  }
 }

@@ -17,3 +17,16 @@
     outline: none;
     margin-left: 0.5rem;
 }
+
+
+@media (min-width: 300.99px) and (max-width: 575.98px){
+    .search input{
+        height: 100%;
+        font-size: 0.6rem;
+        width: 7rem;
+    }
+
+    .search i{
+        font-size: 0.6rem;
+    }
+}

@@ -8,13 +8,16 @@ const Header = ({darkMode, setDarkMode}) => {
         setDarkMode(!darkMode)
     }
     
+    const headerClass = darkMode ? "header__darkmode" : "header"
+    const moonDark = darkMode ? "moon__dark" : "moon__icon"
+
     return (
-        <header className="header">
+        <header className={headerClass}>
             <div className="header_container">
                 <h1>Flags of the world</h1>
                 <div className="header_view">
                     <p onClick={handleDarkMode}>
-                        <span className="moon_icon">
+                        <span className={moonDark}>
                             {
                                 darkMode ? (
                                     <i className="fas fa-moon"></i>

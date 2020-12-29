@@ -5,3 +5,9 @@
     box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.09);
     width: 100%;
 }
+
+@media (min-width: 300.99px) and (max-width: 575.98px){
+    .countryList{
+        justify-content: space-evenly;
+    }
+}

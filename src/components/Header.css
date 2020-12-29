@@ -1,6 +1,11 @@
 .header{
     background-color: rgba(161, 155, 155, 0);
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    position:fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
 }
 
 .header_container{
@@ -9,6 +14,7 @@
     align-items: center;
     height: 4vw;
     padding: 1rem;
+    
 }
 
 .header h1{
@@ -24,3 +30,22 @@
     box-shadow: 0 8px 6px -6px gray;
 }
 
+.header__darkmode{
+    cursor: pointer; 
+}
+
+.moon__dark{
+    transform: rotate(-20deg);
+    display: inline-flex;
+    margin-right: 10px;
+}
+
+@media (min-width: 300.99px) and (max-width: 575.98px) {
+  
+    .header h1{
+        font-size: 1.1rem;
+    }
+    .header p{
+        font-size:0.6rem;
+    }
+}
