@@ -11,7 +11,7 @@ const Search = () => {
         
         dispatch({
             type: "GET_COUNTRY_LIST_BY_NAME",
-            payload: input
+            payload: e.target.value
         })
         setInput(e.target.value)
        

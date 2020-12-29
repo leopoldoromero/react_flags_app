@@ -8,10 +8,10 @@ const FiletrByRegion = () => {
     const regionOptions = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
 
     const handleChange= (e) => {
-        setRegion(e.target.value)
+        
         dispatch({
             type: "GET_COUNTRY_LIST_BY_REGION",
-            payload: region,
+            payload: e.target.value,
           });
 
     }

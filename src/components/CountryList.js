@@ -9,6 +9,9 @@ const CountryList = () => {
 
     const [{...props}, dispatch] = useStateValue();
     const [data, setData] = useState([]);
+    const {countryListByName, countryListByRegion, countryList} = props
+    let list;
+
 
     useEffect(() => {
        axios.get("https://restcountries.eu/rest/v2/all")
@@ -25,12 +28,15 @@ const CountryList = () => {
         })
        
     }, [])
-    
+
+   list = countryList
+
+
     return (
         <div className="countryList">
             {
 
-                props.countryList?.map((country) => (
+                    list?.map((country) => (
                     <Country
                     key={country.name}
                     name={country.name}
