@@ -5,7 +5,7 @@
 
 }
 
-.dark__mode select{
+.filterBy__darkmode select{
     background-color: #1a2833;
     border: none;
     color: white;
@@ -24,7 +24,7 @@
     .filterSelect select{
         font-size: 0.6rem;
     }
-    .dark__mode select{
+    .filterBy__darkmode select{
         font-size: 0.6rem;
     }
 }

@@ -1,26 +1,24 @@
-.darkmode{
-  color: white;
-  background-color: #1a2833;
-}
-.darkmode .app_container{
-  margin-top: 0;
+
+.app__darkmode {
+   background-color: #1a2833;
+   color: white;
 }
 
+.app__darkmode .app__container{
+  margin-top: 2rem;
+}
 
-.app_container{
+.app__container{
   display: flex;
   flex-direction: column;
   margin-top: 7rem;
 }
 
-.app_search{
-  /*display: flex;
-  justify-content: space-between;
-  align-items: center;*/
+.app__search{
   padding: 1rem 0 1rem 0;
 }
 
-.app_countrilist{
+.app__countrilist{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +26,7 @@
 }
 
 @media (min-width: 300.99px) and (max-width: 575.98px){
-  .app_container{
+  .app__container{
     margin-top: 3.5rem;
   }
 }

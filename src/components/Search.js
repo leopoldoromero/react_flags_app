@@ -2,11 +2,11 @@ import React, {useState, useEffect} from 'react'
 import {useStateValue} from "../redux/StateProvider"
 import "./Search.css"
 
-const Search = ({darkMode}) => {
+const Search = () => {
     const [input, setInput] = useState("")
     const [{...props}, dispatch] = useStateValue();
     
-    const dark = darkMode ? "dark__mode" : "search"
+    const dark = props.darkMode ? "search__darkmode" : "search"
 
     const handleChange = (e) => {
         

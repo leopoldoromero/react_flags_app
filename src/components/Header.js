@@ -1,11 +1,16 @@
 import React, {useState, useEffect} from 'react'
-import Brightness3Icon from '@material-ui/icons/Brightness3';
+import {useStateValue} from "../redux/StateProvider"
 import "./Header.css"
 
-const Header = ({darkMode, setDarkMode}) => {
+const Header = () => {
+
+    const [{darkMode}, dispatch] = useStateValue();
 
     const handleDarkMode = () => {
-        setDarkMode(!darkMode)
+        dispatch({
+            type: "SET_DARKMODE",
+            payload: !darkMode
+        })
     }
     
     const headerClass = darkMode ? "header__darkmode" : "header"
@@ -13,9 +18,9 @@ const Header = ({darkMode, setDarkMode}) => {
 
     return (
         <header className={headerClass}>
-            <div className="header_container">
+            <div className="header__container">
                 <h1>Flags of the world</h1>
-                <div className="header_view">
+                <div className="header__view">
                     <p onClick={handleDarkMode}>
                         <span className={moonDark}>
                             {

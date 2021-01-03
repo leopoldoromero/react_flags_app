@@ -2,12 +2,12 @@ import React, {useState, useEffect} from 'react'
 import {useStateValue} from "../redux/StateProvider"
 import "./FilterByRegion.css"
 
-const FiletrByRegion = ({darkMode}) => {
+const FiletrByRegion = () => {
     const [{...props}, dispatch] = useStateValue();
     const [region, setRegion] = useState("");
     const regionOptions = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
 
-    const dark = darkMode ? "dark__mode" : "filterSelect"
+    const dark = props.darkMode ? "filterBy__darkmode" : "filterSelect"
     const handleChange= (e) => {
         
         dispatch({

@@ -10,23 +10,23 @@ import './App.css';
 function App() {
 
   const [{...props}, dispatch] = useStateValue()
-  const [darkMode, setDarkMode] = useState(false);
   
-  const darkClass = darkMode ? "darkmode" : "app"
+  
+  const classDark = props.darkMode ? "app__darkmode" : "app"
   
   //console.log(props)
   return (
-    <div className={darkClass}>
+    <div className={classDark}>
       <Router>
-        <Header darkMode={darkMode} setDarkMode={setDarkMode}/>
+        <Header />
         <Switch>
           <Route path="/country/:id" component={CountryPage} />
           <Route path="/">
-            <div className="app_container">
-              <div className="app_search">
-                <ActionList darkMode={darkMode}/>
+            <div className="app__container">
+              <div className="app__search">
+                <ActionList />
               </div>
-              <div className="app_countrilist">
+              <div className="app__countrilist">
                 <CountryList/>
               </div>
               

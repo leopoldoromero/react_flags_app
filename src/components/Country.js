@@ -14,9 +14,9 @@ const Country = ({flag, name, population, region, capital, alpha2code, altSpelli
     return (
         <div className="country" onClick={handleClick}>
            <img src={flag} alt={name} />
-           <div className="country_container">
+           <div className="country__container">
                <h2>{name}</h2>
-               <div className="country_info">
+               <div className="country__info">
                    <p>
                        <span>Population: {population}</span>
                    </p>

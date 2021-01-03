@@ -7,15 +7,16 @@
     box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.5);
 }
 
-.dark__mode{
+.search__darkmode{
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex: 0.3;
     padding: 0.5rem;
+    background-color: #1a2833;
 }
 
-.dark__mode input{
+.search__darkmode input{
     background-color: #1a2833;
     border: none;
     color: white;
@@ -48,12 +49,12 @@
         font-size: 0.6rem;
     }
 
-    .dark__mode input{
+    .search__darkmode input{
         height: 100%;
         font-size: 0.64rem;
         width: 7rem;
     }
-    .dark__mode i{
+    .search__darkmode i{
         font-size: 0.6rem;
         margin-right: 0.2rem;
     }

@@ -1,5 +1,4 @@
 .header{
-    background-color: rgba(161, 155, 155, 0);
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     position:fixed;
     width: 100%;
@@ -9,7 +8,7 @@
     padding: 0.7rem;
 }
 
-.header_container{
+.header__container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,13 +18,12 @@
 }
 
 .header h1{
-    color:  black;
     font-size: 2rem;
     box-shadow: 0 8px 6px -6px gray;
     padding: 0.5rem;
 }
 
-.header_view{
+.header__view{
     margin-right: 15px;
 }
 
@@ -56,7 +54,7 @@
         padding: 0.2rem;
     }
 
-    .header_container{
+    .header__container{
         margin-bottom: 0.5rem;
     }
   

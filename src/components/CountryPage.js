@@ -6,9 +6,10 @@ import "./CountryPage.css"
 
 const CountryPage = ({match, history }) => {
 
-    const [{countryList}, dispatch] = useStateValue();
+    const [{countryList, darkMode}, dispatch] = useStateValue();
     const [country, setCountry] = useState();
 
+    const pageDark = darkMode ? "countryPage__darkmode" : "countryPage"
     useEffect(()=> {
         if (!country) {
             axios.get(`https://restcountries.eu/rest/v2/alpha/${match.params.id.toLowerCase()}`)
@@ -25,10 +26,9 @@ const CountryPage = ({match, history }) => {
     }
 
     return (
-        <div className="countryPage">
+        <div className={`countryPage ${darkMode ? "darkmode" : ""}`}>
             <div className="countryPage__buttons">
                 <button onClick={handleClick}><i className="fas fa-long-arrow-alt-left"></i>Back</button>
-                <button>Forward<i className="fas fa-long-arrow-alt-right"></i></button>
             </div>
             {
                <CountrySelected {...country}/>  

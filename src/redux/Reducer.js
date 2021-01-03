@@ -4,6 +4,7 @@ export const initialState = {
     countryListByRegion: [],
     filterByName: "",
     filterByRegion: "",
+    darkMode: false
 }
 
 
@@ -49,6 +50,12 @@ const reducer = (state = initialState, action) => {
                     filterByRegion: action.payload
                 }
             }
+            case "SET_DARKMODE":
+                console.log(action.payload)
+                return {
+                    ...state,
+                    darkMode: action.payload
+                }
         
         default:
             return state; 
