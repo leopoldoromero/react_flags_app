@@ -5,6 +5,12 @@
 
 }
 
+.dark__mode select{
+    background-color: #1a2833;
+    border: none;
+    color: white;
+}
+
 .filterSelect select{
     border: none;
     color: black;
@@ -12,7 +18,13 @@
 }
 
 @media (min-width: 300.99px) and (max-width: 575.98px){
+    .filterSelect{
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+    }
     .filterSelect select{
+        font-size: 0.6rem;
+    }
+    .dark__mode select{
         font-size: 0.6rem;
     }
 }

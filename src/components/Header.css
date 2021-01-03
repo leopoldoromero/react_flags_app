@@ -6,6 +6,7 @@
     top: 0;
     left: 0;
     z-index: 99;
+    padding: 0.7rem;
 }
 
 .header_container{
@@ -24,6 +25,10 @@
     padding: 0.5rem;
 }
 
+.header_view{
+    margin-right: 15px;
+}
+
 .header p {
     font-weight: 600;
     padding: 0.5rem;
@@ -32,20 +37,47 @@
 
 .header__darkmode{
     cursor: pointer; 
+    width: 100%;
+    box-shadow: 0 2px 4px 0 rgb(247, 247, 247);
+    height: 80px;
+}
+.moon__icon{
+    margin-right: 5px;
 }
 
 .moon__dark{
-    transform: rotate(-20deg);
-    display: inline-flex;
+    transform: rotate(-180deg);
     margin-right: 10px;
 }
 
 @media (min-width: 300.99px) and (max-width: 575.98px) {
+
+    .header{
+        padding: 0.2rem;
+    }
+
+    .header_container{
+        margin-bottom: 0.5rem;
+    }
   
     .header h1{
         font-size: 1.1rem;
     }
     .header p{
         font-size:0.6rem;
+    }
+
+    .header__darkmode{
+        height: 60px;
+        margin-bottom: 0;
+    }
+
+    .header__darkmode h1{
+        font-size: 1.1rem;
+        box-shadow: 0 8px 6px -6px rgb(247, 244, 244);
+    }
+    .header__darkmode p{
+        font-size:0.6rem;
+        box-shadow: 0 8px 6px -6px rgb(255, 255, 255);
     }
 }

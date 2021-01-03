@@ -3,11 +3,11 @@ import Search from "./Search"
 import FiletrByRegion from "./FiletrByRegion"
 import "./ActionList.css"
 
-const ActionList = () => {
+const ActionList = ({darkMode}) => {
     return (
         <div className="actionList">
-            <Search/>
-            <FiletrByRegion/>
+            <Search darkMode={darkMode}/>
+            <FiletrByRegion darkMode={darkMode}/>
         </div>
     )
 }

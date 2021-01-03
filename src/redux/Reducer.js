@@ -11,48 +11,45 @@ const reducer = (state = initialState, action) => {
     //console.log(action)
     switch(action.type) {
         case "SET_COUNTRY_LIST": 
-            if(action.payload ){
                 return {
                     ...state,
                     countryList: action.payload,
                 }
-            } else {
-                return {
-                    ...state
-                }
-            }
-            
-        
-        case "GET_COUNTRY_LIST_BY_NAME":
-            //console.log(action.payload)
-            if(state.countryList.length > 0 && action.payload !== ""){
-               console.log(action.payload,state.countryList.length)
 
-               const getCountryListByName = state.countryList.filter((country) => 
+        case "GET_COUNTRYLIST_BY_NAME": 
+            let list;
+            if(state.filterByRegion !== ""){
+                
+               list = state.countryListByRegion
+            }else {
+                
+                list = state.countryList
+            }
+            const getCountryListByName = list.filter((country) => 
                country.name.toLowerCase().includes(action.payload.toLowerCase()));
                console.log(getCountryListByName);
 
                return {
                    ...state,
-                   countryListByName: getCountryListByName
+                   countryListByName: getCountryListByName,
+                   filterByName: action.payload
                } 
-            }
+        
             
-        case "GET_COUNTRY_LIST_BY_REGION":
-
+        case "GET_COUNTRYLIST_BY_REGION":
             if(action.payload !== ""){
 
                 console.log(action.payload)
                 const getCountryByRegion = state.countryList.filter((country) => 
                 country.region.toLowerCase() === action.payload.toLowerCase())
-                //console.log(getCountryByRegion);
+                
                 return {
                     ...state,
-                    countryListByRegion: getCountryByRegion
+                    countryListByRegion: getCountryByRegion,
+                    filterByRegion: action.payload
                 }
             }
         
-            
         default:
             return state; 
     }

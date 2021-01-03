@@ -3,12 +3,12 @@ import { useHistory } from "react-router-dom";
 import slugify from "slugify";
 import "./Country.css"
 
-const Country = ({flag, name, population, region, capital, alpha2code}) => {
+const Country = ({flag, name, population, region, capital, alpha2code, altSpellings}) => {
 
         const history = useHistory()
 
         const handleClick = () => {
-            history.push(`/country/${slugify(alpha2code)}`)
+            history.push(`/country/${slugify(altSpellings)}`)
         }
 
     return (

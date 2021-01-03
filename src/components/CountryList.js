@@ -9,9 +9,23 @@ const CountryList = () => {
 
     const [{...props}, dispatch] = useStateValue();
     const [data, setData] = useState([]);
-    const {countryListByName, countryListByRegion, countryList} = props
+    const {filterByName, filterByRegion, countryListByName, countryListByRegion, countryList} = props
 
 
+let list;
+
+if(filterByName !== "" && countryListByName.length > 0 ){
+    console.log("lista por nombre eee")
+    console.log(countryListByName)
+    list = countryListByName
+}else if(filterByRegion !== "" && countryListByRegion.length > 0 ){
+    console.log("lista por region")
+    list = countryListByRegion
+    console.log(countryListByRegion)
+}else{
+    console.log("lista ")
+    list =  countryList
+}
 
     useEffect(() => {
        axios.get("https://restcountries.eu/rest/v2/all")
@@ -29,18 +43,7 @@ const CountryList = () => {
        
     }, [dispatch])
 
-    let list;
-
-    if(countryListByRegion !== "" && countryListByRegion.length > 0){
-        console.log("lista por region")
-        list = countryListByRegion
-    }if(countryListByName !== "" && countryListByName.length > 0){
-        console.log("lista por nombre")
-        list = countryListByName
-    }else{
-        console.log("lista ")
-        list = countryList
-    }
+ 
 
     return (
         <div className="countryList">
@@ -53,7 +56,8 @@ const CountryList = () => {
                 population={country.population}
                 region={country.region}
                 capital={country.capital}
-                alpha2Code={country.alpha2Code}/>
+                alpha2Code={country.alpha2Code}
+                altSpellings={country.altSpellings[0]}/>
             ))
             }
         </div>

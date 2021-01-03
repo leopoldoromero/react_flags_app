@@ -1,0 +1,25 @@
+.countryPage{
+    display: flex;
+    flex-direction: column;
+    margin: 10rem;
+    background-color: ghostwhite;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
+    padding: 0.5rem;
+}
+
+.countryPage__buttons{
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.countryPage__buttons button{
+    padding: 0 0.6rem 0 0.6rem;
+    border: none;
+    margin-right: 0.5rem;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+.countryPage__buttons i{
+    margin: 0.5rem;
+    font-size: 1rem;
+}

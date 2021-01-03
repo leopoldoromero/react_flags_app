@@ -2,15 +2,16 @@ import React, {useState, useEffect} from 'react'
 import {useStateValue} from "../redux/StateProvider"
 import "./Search.css"
 
-const Search = () => {
+const Search = ({darkMode}) => {
     const [input, setInput] = useState("")
     const [{...props}, dispatch] = useStateValue();
     
+    const dark = darkMode ? "dark__mode" : "search"
 
     const handleChange = (e) => {
         
         dispatch({
-            type: "GET_COUNTRY_LIST_BY_NAME",
+            type: "GET_COUNTRYLIST_BY_NAME",
             payload: e.target.value
         })
         setInput(e.target.value)
@@ -18,16 +19,16 @@ const Search = () => {
     }
 
     const clearInput = () => {
-       //dispatch({
-       //    type: "SET_COUNTRY_LIST_BACK",
-       //    payload: ""
-       //})
-       //setInput("")
+       dispatch({
+           type: "GET_COUNTRYLIST_BY_NAME",
+           payload: ""
+       })
+       setInput("")
     }
  
     
     return (
-        <div className="search">
+        <div className={dark}>
             {
                 input ? (
                     <i className="fas fa-times close" onClick={clearInput}></i>
