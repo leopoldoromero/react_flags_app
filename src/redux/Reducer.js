@@ -4,7 +4,7 @@ export const initialState = {
     countryListByRegion: [],
     filterByName: "",
     filterByRegion: "",
-    darkMode: false
+    darkMode: false,
 }
 
 

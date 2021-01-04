@@ -8,8 +8,10 @@ const CountryPage = ({match, history }) => {
 
     const [{countryList, darkMode}, dispatch] = useStateValue();
     const [country, setCountry] = useState();
+    const[loading, setLoading] = useState(true);
 
     const pageDark = darkMode ? "countryPage__darkmode" : "countryPage"
+    
     useEffect(()=> {
         if (!country) {
             axios.get(`https://restcountries.eu/rest/v2/alpha/${match.params.id.toLowerCase()}`)
@@ -17,6 +19,10 @@ const CountryPage = ({match, history }) => {
                 console.log(res.data)
                 setCountry(res.data)
             })
+            .then(()=> {
+                setLoading(false)
+            })
+            
           }
           
     }, [country])
@@ -26,14 +32,26 @@ const CountryPage = ({match, history }) => {
     }
 
     return (
-        <div className={`countryPage ${darkMode ? "darkmode" : ""}`}>
-            <div className="countryPage__buttons">
-                <button onClick={handleClick}><i className="fas fa-long-arrow-alt-left"></i>Back</button>
-            </div>
-            {
-               <CountrySelected {...country}/>  
-            } 
-        </div>
+        <>
+        {
+            loading ? (
+                <div class="d-flex justify-content-center mt-5">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            ) : 
+                <div className={pageDark}>
+                    <div className="countryPage__buttons">
+                        <button onClick={handleClick}><i className="fas fa-long-arrow-alt-left"></i>Back</button>
+                    </div>
+                    {
+                    <CountrySelected {...country}/>  
+                    } 
+                </div>
+        }
+            
+        </>
     )
 }
 

@@ -1,8 +1,7 @@
 .countryPage{
     display: flex;
     flex-direction: column;
-    margin: 10rem;
-    background-color: rgb(217, 217, 255);
+    margin: 1.5rem;
     padding: 0.5rem;
 }
 
@@ -24,8 +23,9 @@
 
 .countryPage__darkmode{
     color: white;
-    background-color: #1a2833;
-    
+    background-color: #1a2833; 
+    margin: 1.5rem;
+    padding: 0.5rem;
 }
 
 @media (min-width: 300.99px) and (max-width: 575.98px){

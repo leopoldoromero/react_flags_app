@@ -8,7 +8,11 @@ const Country = ({flag, name, population, region, capital, alpha2code, altSpelli
         const history = useHistory()
 
         const handleClick = () => {
-            history.push(`/country/${slugify(altSpellings)}`)
+            if(alpha2code){
+                history.push(`/country/${slugify(alpha2code)}`)
+            }else{
+                history.push(`/country/${slugify(altSpellings)}`)
+            }
         }
 
     return (

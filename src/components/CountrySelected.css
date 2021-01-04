@@ -1,3 +1,7 @@
+.countrySelected{
+    height: 100%;
+    width: 100%;
+}
 
 .countrySelected__container{
     display: flex;
@@ -16,6 +20,11 @@
 
 .countrySelected__info strong{
     margin-right: 0.5rem;
+}
+
+.country__darkmode{
+    height: 100%;
+    width: 100%;
 }
 
 @media (min-width: 300.99px) and (max-width: 575.98px){

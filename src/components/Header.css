@@ -1,6 +1,5 @@
 .header{
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-    position:fixed;
     width: 100%;
     top: 0;
     left: 0;
@@ -52,30 +51,70 @@
 
     .header{
         padding: 0.2rem;
+        height: 3.5rem;
     }
 
     .header__container{
         margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
     }
   
     .header h1{
-        font-size: 1.1rem;
+        font-size: 0.8rem;
+        margin-right: auto;
+        margin-bottom: 0;
     }
     .header p{
         font-size:0.6rem;
-    }
-
-    .header__darkmode{
-        height: 60px;
+        margin-right: 0;
         margin-bottom: 0;
     }
 
+    .header__darkmode{
+        padding: 0.2rem;
+        height: 3.5rem;
+    }
+
     .header__darkmode h1{
-        font-size: 1.1rem;
+        font-size: 0.8rem;
         box-shadow: 0 8px 6px -6px rgb(247, 244, 244);
+        margin-right: 0;
+        margin-bottom: 0;
     }
     .header__darkmode p{
         font-size:0.6rem;
         box-shadow: 0 8px 6px -6px rgb(255, 255, 255);
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 1000px){
+    .header h1{
+        font-size: 1.2rem;
+        margin-right: auto;
+        margin-bottom: 0.2rem;
+    }
+    .header p{
+        font-size:0.8rem;
+        margin-right: 0;
+        margin-bottom: 0.2rem;
+    }
+
+    .header__darkmode{
+        height: 3.5rem;
+    }
+    .header__darkmode h1{
+        font-size: 1.2rem;
+        box-shadow: 0 8px 6px -6px rgb(247, 244, 244);
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    .header__darkmode p{
+        font-size:0.8rem;
+        box-shadow: 0 8px 6px -6px rgb(255, 255, 255);
+        margin-right: 0;
+        margin-bottom: 0;
     }
 }
