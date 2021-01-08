@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     z-index: 99;
-    padding: 0.7rem;
+    padding: 1rem;
 }
 
 .header__container{
@@ -19,7 +19,7 @@
 .header h1{
     font-size: 2rem;
     box-shadow: 0 8px 6px -6px gray;
-    padding: 0.5rem;
+    padding: 0.6rem 0.8rem;
 }
 
 .header__view{
@@ -28,8 +28,9 @@
 
 .header p {
     font-weight: 600;
-    padding: 0.5rem;
+    padding: 0.6rem 0.8rem;
     box-shadow: 0 8px 6px -6px gray;
+    margin-bottom: 0;
 }
 
 .header__darkmode{
@@ -37,6 +38,18 @@
     width: 100%;
     box-shadow: 0 2px 4px 0 rgb(247, 247, 247);
     height: 80px;
+    padding: 1rem;
+}
+
+.header__darkmode h1{
+    font-size: 2rem;
+    padding: 0.6rem 0.8rem;
+}
+
+.header__darkmode p{
+    padding: 0.6rem 0.8rem;
+    margin-bottom: 0;
+    font-weight: 600;
 }
 .moon__icon{
     margin-right: 5px;
@@ -87,6 +100,15 @@
         box-shadow: 0 8px 6px -6px rgb(255, 255, 255);
         margin-right: 0;
         margin-bottom: 0;
+    }
+
+    .moon__icon{
+        margin-right: 2px;
+    }
+
+    .moon__dark{
+        transform: rotate(-180deg);
+        margin-right: 2px;
     }
 }
 
